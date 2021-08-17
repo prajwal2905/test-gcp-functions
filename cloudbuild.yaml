@@ -6,4 +6,5 @@ steps:
   - deploy
   - testPipeline
   - --source=../app
+  - --runtime=python37
   - --trigger-http
