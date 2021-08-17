@@ -1,0 +1,12 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SOURCE_DIR="${DIR}/../app"
+
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - testPipeline
+  - --source=${SOURCE_DIR}
+  - --trigger-http
