@@ -1,5 +1,2 @@
 # test-gcp-functions
-
-
-
-Edit GCP
+GCP
