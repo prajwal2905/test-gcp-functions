@@ -1,2 +1,2 @@
 # test-gcp-functions
-GCP
+GCP test
