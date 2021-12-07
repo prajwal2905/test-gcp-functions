@@ -2,7 +2,8 @@ name: Build
 on:
   push:
     branches:
-      - main        # The default branch
+      - main # The default branch
+      - dev
       - .*    # The other branches to be analyzed
   pull_request:
     types: [opened, synchronize, reopened]
@@ -17,7 +18,7 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@*
+        uses: SonarSource/sonarcloud-github-action@dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
